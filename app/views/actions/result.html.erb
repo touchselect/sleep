@@ -1,0 +1,19 @@
+<h1>寝る前戦争</h1>
+<h2>
+  結果は
+</h2>
+
+<table>
+  <tr>
+    <th>数字</th>
+    <th>名前</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.number %></td>
+      <td><%= user.name %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to '最初に戻る', destroy_action_path, method: :delete %>

@@ -1,0 +1,6 @@
+<h1>寝る前戦争</h1>
+<%= form_with model: @user, url: actions_path, method: :post do |f| %>
+	<h5>名前を決めてください</h5>
+	<div><%= f.text_field :name %></div>
+	<%= f.submit '決定' %>
+<% end %>
