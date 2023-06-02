@@ -5,13 +5,13 @@ class ActionsController < ApplicationController
   
   def create
     @user = User.new(action_params)
-    if @user.name
-      render :top
-    else
-      @user.number = rand(100)
+    # if @user.name
+    #   render :top
+    # else
+      @user.number = rand(1..99)
       @user.save
       redirect_to action_path(@user.id)
-    end
+    # end
   end
   
   def show
